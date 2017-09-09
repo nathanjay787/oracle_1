@@ -1,4 +1,4 @@
-package ca.qc.johnabbott.cs.cs616.notes;
+package com.example.a1068028.notemaker_mk1;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;

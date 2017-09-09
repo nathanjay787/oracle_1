@@ -1,10 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_Layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.a1068028.notemaker_mk1.NoteActivityFragment"
     tools:showIn="@layout/activity_note">
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:id="@+id/title_EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:ems="10"
+        android:hint="Title"
+        android:inputType="textNoSuggestions"
+        android:textSize="32sp" />
+
+    <EditText
+        android:id="@+id/body_EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6"
+        android:ems="10"
+        android:gravity="top|left"
+        android:hint="Body"
+        android:inputType="textMultiLine"
+        android:singleLine="false" />
+
+    <Switch
+        android:id="@+id/reminder_Switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="#666666"
+        android:elevation="1dp"
+        android:padding="5dp"
+        android:text="Reminder"
+        android:textColor="#FFF" />
+
+    <LinearLayout
+        android:id="@+id/reminder_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/date_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#666666"
+            android:padding="10dp"
+            android:text="September 1st, 2016"
+            android:textColor="#FFF"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#333333" />
+
+        <TextView
+            android:id="@+id/time_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#666666"
+            android:padding="10dp"
+            android:text="10:42 AM"
+            android:textColor="#FFF"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#333333" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#666666"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <com.example.a1068028.notemaker_mk1.CircleView
+            android:id="@+id/circlePink"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight=".125"
+            android:paddingBottom="5dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp" />
+
+        <com.example.a1068028.notemaker_mk1.CircleView
+            android:id="@+id/circleOrange"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight=".125"
+            android:paddingBottom="5dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp" />
+
+        <com.example.a1068028.notemaker_mk1.CircleView
+            android:id="@+id/circleBeige"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight=".125"
+            android:paddingBottom="5dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp" />
+
+        <com.example.a1068028.notemaker_mk1.CircleView
+            android:id="@+id/circleGreen"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight=".125"
+            android:paddingBottom="5dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp" />
+
+        <com.example.a1068028.notemaker_mk1.CircleView
+            android:id="@+id/circleAqua"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight=".125"
+            android:paddingBottom="5dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp" />
+
+        <com.example.a1068028.notemaker_mk1.CircleView
+            android:id="@+id/circleBlue"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight=".125"
+            android:paddingBottom="5dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp" />
+
+        <com.example.a1068028.notemaker_mk1.CircleView
+            android:id="@+id/circlePurple"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight=".125"
+            android:paddingBottom="5dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp" />
+
+        <com.example.a1068028.notemaker_mk1.CircleView
+            android:id="@+id/circleBrown"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight=".125"
+            android:paddingBottom="5dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp" />
+
+    </LinearLayout>
+</LinearLayout>
