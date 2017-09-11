@@ -1,12 +1,14 @@
 package com.example.a1068028.notemaker_mk1;
 
-import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+import java.util.LinkedList;
+import java.util.List;
 
 import static android.view.View.GONE;
 
@@ -41,12 +43,51 @@ public class NoteActivityFragment extends Fragment {
         purpleColor.setColor(128, 0, 128);
         brownColor.setColor(160, 82, 45);
 
-        View baseLayout = root.findViewById(R.id.base_Layout);
-        View reminderLayout = root.findViewById(R.id.reminder_Layout);
+        Switch reminderSwitch = root.findViewById(R.id.reminder_Switch);
 
-        baseLayout.setBackgroundColor(Color.rgb(255, 0, 255));
+        final View baseLayout = root.findViewById(R.id.base_Layout);
+        final View reminderLayout = root.findViewById(R.id.reminder_Layout);
+
+        baseLayout.setBackgroundColor(pinkColor.getColor());
         reminderLayout.setVisibility(GONE);
-        //return inflater.inflate(R.layout.fragment_note, container, false);
+
+        List<CircleView> circles = new LinkedList<CircleView>();
+
+        circles.add(pinkColor);
+        circles.add(orangeColor);
+        circles.add(beigeColor);
+        circles.add(greenColor);
+        circles.add(aquaColor);
+        circles.add(blueColor);
+        circles.add(purpleColor);
+        circles.add(brownColor);
+
+        CircleView.OnClickListener handler = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int clickedID = view.getId();
+                CircleView clicked = view.findViewById(clickedID);
+                baseLayout.setBackgroundColor(clicked.getColor());
+            }
+        };
+
+        for (CircleView c : circles) {
+            c.setOnClickListener(handler);
+        }
+
+        reminderSwitch.setOnCheckedChangeListener(new Switch.OnCheckedChangeListener(){
+
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b){
+                    reminderLayout.setVisibility(View.VISIBLE);
+                }
+                else{
+                    reminderLayout.setVisibility(GONE);
+                }
+            }
+        });
+
         return root;
     }
 }

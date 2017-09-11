@@ -3,8 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.a1068028.notemaker_mk1.NoteActivity">
     <item
+        android:id="@+id/save_Button"
+        android:orderInCategory="101"
+        android:title="SAVE"
+        app:showAsAction="always" />
+    <item
         android:id="@+id/action_settings"
-        android:orderInCategory="100"
+        android:orderInCategory="102"
         android:title="@string/action_settings"
         app:showAsAction="never" />
 </menu>
