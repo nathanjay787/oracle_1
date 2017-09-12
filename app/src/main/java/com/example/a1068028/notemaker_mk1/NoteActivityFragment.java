@@ -1,12 +1,22 @@
 package com.example.a1068028.notemaker_mk1;
 
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
+import android.content.Context;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
+import android.widget.DatePicker;
 import android.widget.Switch;
+import android.widget.TextView;
+import android.widget.TimePicker;
+
+import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -34,24 +44,65 @@ public class NoteActivityFragment extends Fragment {
         CircleView purpleColor = root.findViewById(R.id.circlePurple);
         CircleView brownColor = root.findViewById(R.id.circleBrown);
 
-        pinkColor.setColor(255, 0, 255);
-        orangeColor.setColor(255, 165, 0);
-        beigeColor.setColor(210, 180, 140);
-        greenColor.setColor(127, 255, 0);
-        aquaColor.setColor(0, 255, 255);
-        blueColor.setColor(70, 130, 180);
-        purpleColor.setColor(128, 0, 128);
-        brownColor.setColor(160, 82, 45);
+        Context thisFragment = getContext();
+
+        pinkColor.setColor(ContextCompat.getColor(thisFragment, R.color.base08));
+        orangeColor.setColor(ContextCompat.getColor(thisFragment, R.color.base09));
+        beigeColor.setColor(ContextCompat.getColor(thisFragment, R.color.base0A));
+        greenColor.setColor(ContextCompat.getColor(thisFragment, R.color.base0B));
+        aquaColor.setColor(ContextCompat.getColor(thisFragment, R.color.base0C));
+        blueColor.setColor(ContextCompat.getColor(thisFragment, R.color.base0D));
+        purpleColor.setColor(ContextCompat.getColor(thisFragment, R.color.base0E));
+        brownColor.setColor(ContextCompat.getColor(thisFragment, R.color.base0F));
 
         Switch reminderSwitch = root.findViewById(R.id.reminder_Switch);
 
         final View baseLayout = root.findViewById(R.id.base_Layout);
         final View reminderLayout = root.findViewById(R.id.reminder_Layout);
 
+        TextView dateText = root.findViewById(R.id.date_TextView);
+        TextView timeText = root.findViewById(R.id.time_TextView);
+
+        Date initial = new Date();
+        final DialogFragment timeDialog = TimePickerDialogFragment.create(
+                initial,
+                new TimePickerDialog.OnTimeSetListener(){
+
+                    @Override
+                    public void onTimeSet(TimePicker timePicker, int i, int i1) {
+
+                    }
+                }
+        );
+        final DialogFragment dateDialog = DatePickerDialogFragment.createDatePicker(
+                initial,
+                new DatePickerDialog.OnDateSetListener(){
+
+                    @Override
+                    public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
+
+                    }
+                });
+
+        timeText.setOnClickListener(new TextView.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                timeDialog.show(getFragmentManager(), "timePicker");
+            }
+        });
+        dateText.setOnClickListener(new TextView.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                dateDialog.show(getFragmentManager(), "datePicker");
+            }
+        });
+
         baseLayout.setBackgroundColor(pinkColor.getColor());
         reminderLayout.setVisibility(GONE);
 
-        List<CircleView> circles = new LinkedList<CircleView>();
+        List<CircleView> circles = new LinkedList<>();
 
         circles.add(pinkColor);
         circles.add(orangeColor);
