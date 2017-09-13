@@ -46,7 +46,7 @@ public class NoteActivityFragment extends Fragment {
         switch (item.getItemId()) {
             case R.id.action_save : {
                 Note note = new Note(titleView.getText().toString(), bodyView.getText().toString(), chosenCircle, hasReminder, userCalendar.getTime());
-                Log.v(this.getTag(), note.toString());
+                Log.d(this.getTag(), note.toString());
                 return true;
             }
         }
