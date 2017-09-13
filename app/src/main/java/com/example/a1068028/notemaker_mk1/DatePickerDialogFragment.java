@@ -85,6 +85,7 @@ public class DatePickerDialogFragment extends DialogFragment {
 
         DatePickerDialog dialog = new DatePickerDialog(getActivity(), listener, year, month, dayOfMonth);
         // Create a new instance of TimePickerDialog and return it
+        //IMPORTANT: set the minimum date for the DatePickerdialog. Doing this eans no validation is necessary later
         dialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
         return dialog;
         //return new DatePickerDialog(getActivity(), listener, year, month, dayOfMonth);
