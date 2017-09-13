@@ -83,7 +83,10 @@ public class DatePickerDialogFragment extends DialogFragment {
             dayOfMonth = c.get(Calendar.DAY_OF_MONTH);
         }
 
+        DatePickerDialog dialog = new DatePickerDialog(getActivity(), listener, year, month, dayOfMonth);
         // Create a new instance of TimePickerDialog and return it
-        return new DatePickerDialog(getActivity(), listener, year, month, dayOfMonth);
+        dialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
+        return dialog;
+        //return new DatePickerDialog(getActivity(), listener, year, month, dayOfMonth);
     }
 }

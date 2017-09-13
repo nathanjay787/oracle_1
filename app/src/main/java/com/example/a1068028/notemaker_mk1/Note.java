@@ -21,6 +21,10 @@ public class Note {
         this.reminder = reminder;
     }
 
+    public Note() {
+
+    }
+
     @Override
     public String toString() {
         return "Note{" +

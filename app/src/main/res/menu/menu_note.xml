@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.a1068028.notemaker_mk1.NoteActivity">
     <item
-        android:id="@+id/save_Button"
+        android:id="@+id/action_save"
         android:orderInCategory="101"
         android:title="SAVE"
         app:showAsAction="always" />
