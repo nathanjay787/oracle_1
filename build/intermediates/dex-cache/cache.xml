@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="/Users/1068028/AndroidStudioProjects/NoteMaker_mk1/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="D:\Resident\Documents\Android_Solutions\oracle_1\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.1"
-        sha1="c03e86470de7d816183112e9df61dbed6ed70df2">
-        <dex dex="/Users/1068028/AndroidStudioProjects/NoteMaker_mk1/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_c9801df512697cea763d7a1bd75a354ceef0c8ee/classes.dex" />
+        sha1="9ba8915f7b1fd338ad91ab6cce7b12b600919501">
+        <dex dex="D:\Resident\Documents\Android_Solutions\oracle_1\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_17c6ab9f8d28606bf3272e8ebff445d31150b69c\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/1068028/AndroidStudioProjects/NoteMaker_mk1/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="D:\Resident\Documents\Android_Solutions\oracle_1\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.1"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="/Users/1068028/AndroidStudioProjects/NoteMaker_mk1/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_7a1a7ace96ae5d0871bf8b7aa0bf7c23453755e5/classes.dex" />
+        <dex dex="D:\Resident\Documents\Android_Solutions\oracle_1\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_0c8ca50137879437df7ce052bafbc8ee8adbf34e\classes.dex" />
     </item>
 
 </items>
